@@ -1,0 +1,12 @@
+export { AggregateStaffArgs } from "./AggregateStaffArgs";
+export { CreateManyStaffArgs } from "./CreateManyStaffArgs";
+export { CreateStaffArgs } from "./CreateStaffArgs";
+export { DeleteManyStaffArgs } from "./DeleteManyStaffArgs";
+export { DeleteStaffArgs } from "./DeleteStaffArgs";
+export { FindFirstStaffArgs } from "./FindFirstStaffArgs";
+export { FindManyStaffArgs } from "./FindManyStaffArgs";
+export { FindUniqueStaffArgs } from "./FindUniqueStaffArgs";
+export { GroupByStaffArgs } from "./GroupByStaffArgs";
+export { UpdateManyStaffArgs } from "./UpdateManyStaffArgs";
+export { UpdateStaffArgs } from "./UpdateStaffArgs";
+export { UpsertStaffArgs } from "./UpsertStaffArgs";

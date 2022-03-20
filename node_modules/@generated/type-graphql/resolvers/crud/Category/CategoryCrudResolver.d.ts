@@ -1,0 +1,31 @@
+import { GraphQLResolveInfo } from "graphql";
+import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs";
+import { CreateCategoryArgs } from "./args/CreateCategoryArgs";
+import { CreateManyCategoryArgs } from "./args/CreateManyCategoryArgs";
+import { DeleteCategoryArgs } from "./args/DeleteCategoryArgs";
+import { DeleteManyCategoryArgs } from "./args/DeleteManyCategoryArgs";
+import { FindFirstCategoryArgs } from "./args/FindFirstCategoryArgs";
+import { FindManyCategoryArgs } from "./args/FindManyCategoryArgs";
+import { FindUniqueCategoryArgs } from "./args/FindUniqueCategoryArgs";
+import { GroupByCategoryArgs } from "./args/GroupByCategoryArgs";
+import { UpdateCategoryArgs } from "./args/UpdateCategoryArgs";
+import { UpdateManyCategoryArgs } from "./args/UpdateManyCategoryArgs";
+import { UpsertCategoryArgs } from "./args/UpsertCategoryArgs";
+import { Category } from "../../../models/Category";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateCategory } from "../../outputs/AggregateCategory";
+import { CategoryGroupBy } from "../../outputs/CategoryGroupBy";
+export declare class CategoryCrudResolver {
+    category(ctx: any, info: GraphQLResolveInfo, args: FindUniqueCategoryArgs): Promise<Category | null>;
+    findFirstCategory(ctx: any, info: GraphQLResolveInfo, args: FindFirstCategoryArgs): Promise<Category | null>;
+    categories(ctx: any, info: GraphQLResolveInfo, args: FindManyCategoryArgs): Promise<Category[]>;
+    createCategory(ctx: any, info: GraphQLResolveInfo, args: CreateCategoryArgs): Promise<Category>;
+    createManyCategory(ctx: any, info: GraphQLResolveInfo, args: CreateManyCategoryArgs): Promise<AffectedRowsOutput>;
+    deleteCategory(ctx: any, info: GraphQLResolveInfo, args: DeleteCategoryArgs): Promise<Category | null>;
+    updateCategory(ctx: any, info: GraphQLResolveInfo, args: UpdateCategoryArgs): Promise<Category | null>;
+    deleteManyCategory(ctx: any, info: GraphQLResolveInfo, args: DeleteManyCategoryArgs): Promise<AffectedRowsOutput>;
+    updateManyCategory(ctx: any, info: GraphQLResolveInfo, args: UpdateManyCategoryArgs): Promise<AffectedRowsOutput>;
+    upsertCategory(ctx: any, info: GraphQLResolveInfo, args: UpsertCategoryArgs): Promise<Category>;
+    aggregateCategory(ctx: any, info: GraphQLResolveInfo, args: AggregateCategoryArgs): Promise<AggregateCategory>;
+    groupByCategory(ctx: any, info: GraphQLResolveInfo, args: GroupByCategoryArgs): Promise<CategoryGroupBy[]>;
+}
