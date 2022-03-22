@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " node index.ts"
+    "start": "nodemon --exec ts-node-dev --respawn index.ts",
+    "gen": "npx prisma generate"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techloset/training.techloset-prisma.git"
