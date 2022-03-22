@@ -103,9 +103,9 @@ model Courses {
   courseDesc       String
   courseIntro      String
   instructor       User               @relation(fields: [instructorId], references: [id])
-  instructorId     String             @db.ObjectId
+  instructorId     String             @db.String
   courseCategory   Category           @relation(fields: [courseCategoryId], references: [id])
-  courseCategoryId String             @db.ObjectId
+  courseCategoryId String             @db.String
   createdAt        DateTime           @default(now())
   updateAt         DateTime           @updatedAt
   lectures         Lectures[]
@@ -186,7 +186,7 @@ model Events {
   eventImage String?
   eventDate  DateTime
   Speaker    Speaker  @relation(fields: [speakerId], references: [id])
-  speakerId  String   @db.ObjectId
+  speakerId  String   @db.String
 }
 
 model Faq {
@@ -287,7 +287,7 @@ enum EnrollStatus {
 model Students {
   id     String        @id @default(auto()) @map("_id") @db.ObjectId
   name   String
-  email  String        @unique @db.ObjectId
+  email  String        @unique @db.String
   status StudentStatus @default(OFFLINE)
 }
 
@@ -299,7 +299,7 @@ enum StudentStatus {
 model Staff {
   id    String    @id @default(auto()) @map("_id") @db.ObjectId
   name  String
-  email String    @unique @db.ObjectId
+  email String    @unique @db.String
   role  StaffRole @default(ADMIN)
   phone String
 }

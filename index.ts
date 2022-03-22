@@ -64,7 +64,8 @@ async function main() {
   apolloServer.applyMiddleware({ app });
   app.listen(PORT, () => {
 
-    console.log(`Server running at port ` + PORT);
+    console.log(`App listening on port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
   });
 }
 

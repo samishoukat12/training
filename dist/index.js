@@ -102,7 +102,8 @@ function main() {
                     _a.sent();
                     apolloServer.applyMiddleware({ app: app });
                     app.listen(PORT, function () {
-                        console.log("Server running at port " + PORT);
+                        console.log("App listening on port ".concat(PORT));
+                        console.log('Press Ctrl+C to quit.');
                     });
                     return [2 /*return*/];
             }
